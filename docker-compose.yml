@@ -1,6 +1,28 @@
 version: '3'
 
 services:
+  doctor-label-mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=db_dev_doctor_label
+      - MYSQL_USER=usertestdoctorlabel
+      - MYSQL_PASSWORD=123456
+    ports:
+      - 3307:3306
+    volumes:
+      - "./doctor-label-schema.sql:/docker-entrypoint-initdb.d/1.sql"
+      - "./doctor-label-data.sql:/docker-entrypoint-initdb.d/2.sql"
+
+  doctor-label-app:
+    image: doctor/label
+    ports:
+       - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://doctor-label-mysql:3306/db_dev_doctor_label?autoReconnect=true&useSSL=false
+    depends_on:
+       - doctor-label-mysql
+  
   doctor-labelling-mysql:
     image: mysql:5.7
     environment:
@@ -9,7 +31,10 @@ services:
       - MYSQL_USER=usertestdoctorlabelling
       - MYSQL_PASSWORD=123456
     ports:
-      - 3308:3306
+      - 3308:3307
+    volumes:
+      - "./doctor-labelling-schema.sql:/docker-entrypoint-initdb.d/1.sql"
+      - "./doctor-labelling-data.sql:/docker-entrypoint-initdb.d/2.sql"
 
   doctor-labellingapp:
     image: doctor/labelling
