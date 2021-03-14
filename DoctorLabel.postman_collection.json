@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DoctorLabel",
+		"_postman_id": "d7117590-578c-1633-fcfd-6d595ffbb41d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Labels",
+			"request": {
+				"url": "http://localhost:8080/labels/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"S93439A\",\n\t\"description\": \"Doenca cardio vasculhar versao\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Label",
+			"request": {
+				"url": "http://localhost:8080/labels/S93439A",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"S93439A\",\n\t\"description\": \"Doenca cardio vasculhar versao\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Label",
+			"request": {
+				"url": "http://localhost:8080/labels/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"S93439A\",\n\t\"description\": \"Doenca cardio vasculhar versao\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Label",
+			"request": {
+				"url": "http://localhost:8080/labels/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"S93439A\",\n\t\"description\": \"Doenca cardio vasculhar versao\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Label",
+			"request": {
+				"url": "http://localhost:8080/labels/S93449A",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

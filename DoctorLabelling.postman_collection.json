@@ -1,0 +1,181 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DoctorLabelling",
+		"_postman_id": "a9c76720-da56-ee00-5d9b-f6567beb91f6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cases",
+			"request": {
+				"url": "http://localhost:8081/cases/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBcGkgRG9jdG9yIExhYmVsbGluZyBTZXJ2aWNlIiwic3ViIjoiMSIsImlhdCI6MTYxNTQ2OTgzNywiZXhwIjoxNjE1NTU2MjM3fQ.oBx-Fk8de9t4Pw4G4Ny9YsTtpWx3Ziosv-XiDHLqFHM",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"S93439A\",\n\t\"description\": \"Doenca cardio vasculhar versao\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Case",
+			"request": {
+				"url": "http://localhost:8081/cases/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"S93439A\",\n\t\"description\": \"Doenca cardio vasculhar versao\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Case By Label Id",
+			"request": {
+				"url": "http://localhost:8081/cases/label/A09",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"S93439A\",\n\t\"description\": \"Doenca cardio vasculhar versao\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Case",
+			"request": {
+				"url": "http://localhost:8081/cases/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"electronicHealthRecord\": \"Tenho dores de cabeça constantes e cansaço crónico\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Cases insert label",
+			"request": {
+				"url": "http://localhost:8081/cases/101/label",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"S93439A\",\n\t\"description\": \"Doenca cardio vasculhar versao\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Case delete Label",
+			"request": {
+				"url": "http://localhost:8081/cases/101/A10",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Cases Auth",
+			"request": {
+				"url": "http://localhost:8081/auth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"chang@gmail.com\",\n\t\"password\": \"123456\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Cases Next Case",
+			"request": {
+				"url": "http://localhost:8081/cases/nextCase",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiRG9jdG9yIENoYW5nIiwiaWQiOjEsImV4cCI6MTYxNTY2NDA4MCwiaWF0IjoxNjE1NTc3NjgwLCJlbWFpbCI6ImNoYW5nQGdtYWlsLmNvbSJ9.C4ypeCkOaag1ftlC8ekGZmm7t9_utiP_V-iCgJT99Tw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"S93439A\",\n\t\"description\": \"Doenca cardio vasculhar versao\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
